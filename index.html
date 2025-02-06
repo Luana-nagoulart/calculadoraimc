@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de Massa Corporal</title>
+    
+</head>
+
+
+
+<body>
+    <div class="container">
+        <H2>Calculadora de IMC</H2>
+
+        <label for="peso"> Peso </label>
+        <input type="number" name="peso" id="peso" placeholder="Digite seu peso" min="0">
+
+        <label for="altura"> Altura </label>
+        <input type="number" name="altura" id="Altura" placeholder="Digite sua altura" step="0.01" min="0">
+
+        <button class="glow-on-hover" onclick="calcularImc()">Calcular</button>
+        <p id="resultado"></p>
+        <button class="toggle-mode" onclick="alternarModo()">Alternar modo Claro/Escuro</button>
+
+    </div>
+
+    <script>
+         function alternarModo () {
+            document.body.classList.toggle("dark-mode")
+         }
+
+
+         //------Condição----//
+
+         function calcularImc(){
+            let peso = document.getElementById("peso").value;
+            let altura = document.getElementById("Altura").value;
+
+            if (peso && Altura) {
+                let imc = (peso / (altura * altura)).toFixed(2);
+                let classificacao = "";
+                if (imc < 18.5) {
+                    classificacao = "Abaixo do Peso";
+
+                }else if (imc < 24.9) {
+                    classificacao = "Normal";
+
+                }else if (imc < 29.9) {
+                    classificacao = "Excesso de peso";
+
+                }else if (imc < 34.9) {
+                    classificacao = "Obesidade Classe I";
+
+                }else if (imc < 39.9) {
+                    classificacao = "Obesidade Classe II";
+                    
+            
+                }else {
+                    classificacao = "Obesidade classe III"; 
+                }
+
+                document.getElementById("resultado").innerText = `O seu índice é ${imc} portanto, ${classificacao}`;                   
+                                      
+
+
+            }else{
+                document.getElementById ("resultado").innerText = "Por favor, preencha todos os campos";
+            }
+            
+
+
+
+         }
+
+         
+
+
+
+    </script>
+
+
+<div class="
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></div>
+
+
+
+
+
+
+    
+</body>
+</html>
